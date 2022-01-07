@@ -1,0 +1,58 @@
+<div class="justify-content-center">
+    <h1 class="text-center"> Book an Appointment </h1>
+    <div class="col-10">
+        <%= form_with(model: @appointment, local: true) do |f| %>
+            <div class="form-group">
+                <%= f.label :appointment_time %>
+                <div class="col-2">
+                    <%= f.datetime_local_field  :appointment_time, class:"form-control shadow rounded", placeholder: "Title of article"  %> 
+                </div>
+            </div>
+            <div class="form-group">
+                <%= f.label :first_name %>
+                <div class="col-2">
+                    <%= f.text_field :first_name, class:"form-control shadow rounded", placeholder: "First name"  %> 
+                </div>
+            </div>
+            <div class="form-group">
+                <%= f.label :last_name %>
+                <div class="col-2">
+                    <%= f.text_field :last_name, class:"form-control shadow rounded", placeholder: "First name"  %> 
+                </div>
+            </div>
+            <div class="form-group">
+                <%= f.label :date_of_birth %>
+                <div class="col-2">
+                    <%= f.date_field :date_of_birth, class:"form-control shadow rounded", placeholder: "First name"  %> 
+                </div>
+            </div>
+            <div class="form-group">
+                <%= f.label :gender %>
+                <div class="col-2">
+                    <%= f.radio_button :gender, "Male" %>
+                    <%= f.label :gender, "Male" %>
+                    <%= f.radio_button :gender, "Female" %>
+                    <%= f.label :gender, "Female" %>
+                </div>
+            </div>
+            <div class="form-group">
+                <%= f.label :phone %>
+                <div class="col-2">
+                    <%= f.text_field :phone, class:"form-control shadow rounded", placeholder: "Phone number"  %> 
+                </div>
+            </div>
+            <div class="form-group">
+                <%= f.label :email %>
+                <div class="col-2">
+                    <%= f.text_field :email, class:"form-control shadow rounded", placeholder: "Email address"  %> 
+                </div>
+            </div>
+            
+            <%= f.hidden_field :id, :value => params[:id] %>
+            
+            <div class="form-group row text-center mt-5">
+                <%= f.submit class:"btn blue-button "%>
+            </div>
+        <% end %>
+    </div>
+</div>

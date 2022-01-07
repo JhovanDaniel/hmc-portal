@@ -7,15 +7,26 @@ a:hover {
     color: black;
 }
 
+#appointment-details{
+    text-align: left;
+    background-color: #f7f7f7;
+    padding: 5rem;
+}
+
 .blue-button{
     background-color: #0C1561;
     color: white;
 }
-
 .blue-button:hover{
     background-color: #0C1561;
     color: white;
 }
+.blue-button:active{
+    background-color: #0C1561;
+    color: white;
+}
+
+
 
 .brand-text{
     color: black;
@@ -51,7 +62,7 @@ a:hover {
 
 .home-list-bg{
     background-color: white;
-    width: 600px;
+    width: 80rem;
     margin: 0 auto;
     padding: 4rem;
 }
