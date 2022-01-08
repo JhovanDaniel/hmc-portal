@@ -1,6 +1,9 @@
 class Appointment < ApplicationRecord
     
     belongs_to :location
+    has_many :payment
+    
+    accepts_nested_attributes_for :payment
     
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
     validates :email, presence: true, length: { maximum: 105}, 

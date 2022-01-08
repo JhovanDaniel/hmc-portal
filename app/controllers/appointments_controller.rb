@@ -7,6 +7,7 @@ class AppointmentsController < ApplicationController
     end
     
     def create
+        
         @appointment = Appointment.new(appointment_params)
         if @appointment.save
             name = @appointment.first_name
